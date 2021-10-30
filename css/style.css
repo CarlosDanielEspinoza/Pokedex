@@ -1,0 +1,168 @@
+*{
+	margin: 0rem;
+	padding: 0rem;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: Helvetica,Tahoma;
+	user-select: none;
+}
+html{
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(#F5BDBD,#F3BFBF);
+}
+
+header{
+	background: linear-gradient(#D40000,#AE0A0A);
+	padding: 0.5rem;
+}
+
+main{
+	flex: 1;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+.subTitles{
+	color: black;
+	margin-bottom: 0.1em;
+}
+.subValues{
+	color: #F5BDBD;
+	font-style: italic;
+	font-size: 0.8em;
+}
+.subQuality{
+	color: white;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+
+.pokeSect1{
+	margin: 1em;
+	margin-bottom: 0em;
+
+}
+.pokeSect2{
+	background: linear-gradient(#D40000,#AE0A0A);
+	border-radius: 1em;
+	font-weight: bolder;
+	margin: 1em;
+	margin-bottom: 0em;
+	padding: 1em;
+	border: 2px;
+	border-style: solid;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.pokeTitle{
+	background: linear-gradient(#D40000,#AE0A0A);
+	border-radius: 1em;
+	padding: 0.5em;
+	border: 2px;
+	border-style: solid;
+}
+
+#pokeImg{
+	width: 270px;
+}
+
+#pokeType{
+	flex: 50%;
+}
+#pokeAbilities{
+	flex: 50%;
+}
+#pokeStats{
+	flex: 100%;
+}
+
+footer{
+	background: linear-gradient(#D40000,#AE0A0A);
+	margin-top: 1em;
+	padding: 0.4em;
+	font-size: 0.5em;
+}
+a{
+	text-decoration: unset;
+	color: black;
+}
+
+#pokeBtn{
+	transform: rotate(0);
+	transition-property: transform;
+	transition-duration: 0.5s;
+	cursor: pointer; 
+}
+#pokeBtn:hover{
+	transform: rotate(1turn);
+}
+
+
+@media (orientation: portrait){
+	
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	header{
+		font-size: 3em;
+	}
+
+	.pokeSect1{
+		font-size: 2.5em;
+	}
+
+	.subTitles{
+		font-size: 3em;
+	}
+	.subValues{
+		font-size: 1.2em;
+	}
+	.subQuality{
+		font-size: 2em;
+	}
+
+	#pokeImg{
+		width: 80%;
+	}
+
+	.pokeSect2{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 60%;
+		align-self: center;
+	}
+
+	#pokeType{
+		flex: 1;
+		order: 0;
+	}
+	#pokeAbilities{
+		flex: 1;
+		order: 1;
+	}
+	#pokeStats{
+		flex: 1;
+		order:; 1;
+	}
+
+	#pokeBtn{
+		width: 60px;
+	}
+}
